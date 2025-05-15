@@ -1,3 +1,5 @@
+package hm_oop1;
+
 public class Hogwarts {
     private String name; // Имя
     private String surname; // Фамилия

@@ -1,3 +1,5 @@
+package hm_oop1;
+
 public class Slytherin extends Hogwarts {
     private int cunning;
     private int determination;

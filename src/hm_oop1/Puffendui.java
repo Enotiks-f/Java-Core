@@ -1,3 +1,5 @@
+package hm_oop1;
+
 public class Puffendui extends Hogwarts {
     private int industrious;
     private int fidelity;

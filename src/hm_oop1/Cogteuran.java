@@ -1,3 +1,5 @@
+package hm_oop1;
+
 public class Cogteuran extends Hogwarts{
     private int clever; // Ум
     private int mudras; // Мудрость
