@@ -1,4 +1,4 @@
-public class Truck implements diognosticsForTruck{
+public class Truck implements Serviceable{
 
     private String modelName;
     private int wheelsCount;
@@ -13,6 +13,13 @@ public class Truck implements diognosticsForTruck{
 
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
+    }
+
+    @Override
+    public void service() {
+        updateTyre();
+        checkEngine();
+        checkTrailer();
     }
 
     public String getModelName() {

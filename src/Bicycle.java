@@ -1,8 +1,13 @@
-public class Bicycle implements diognosticsForBicycle {
+public class Bicycle implements Serviceable {
     private String modelName;
     private int wheelsCount;
 
     @Override
+    public void service() {
+        System.out.println("Обслуживаем велосипед:");
+        updateTyre();
+    }
+
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }

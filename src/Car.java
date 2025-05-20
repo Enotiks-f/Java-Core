@@ -1,4 +1,4 @@
-public class Car implements diognosticsForCar{
+public class Car implements Serviceable{
     private String modelName;
     private int wheelsCount;
 
@@ -8,6 +8,13 @@ public class Car implements diognosticsForCar{
 
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
+
+    }
+
+    @Override
+    public void service() {
+        updateTyre();
+        checkEngine();
     }
 
     public String getModelName() {
