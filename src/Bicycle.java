@@ -5,7 +5,7 @@ public class Bicycle implements Serviceable {
     @Override
     public void service() {
         System.out.println("Обслуживаем велосипед:");
-        System.out.println(" -Меняем покрышку")
+        System.out.println(" -Меняем покрышку");
     }
 
     public String getModelName() {
