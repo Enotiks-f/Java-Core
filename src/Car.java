@@ -4,9 +4,11 @@ public class Car implements Serviceable {
 
     @Override
     public void service() {
-        System.out.println("Обслуживаем автомобиль:");
-        System.out.println(" -Меняем покрышку");
-        System.out.println(" -Проверяем двигатель");
+        System.out.println("Меняем покрышку");
+    }
+
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель");
     }
 
     public String getModelName() {

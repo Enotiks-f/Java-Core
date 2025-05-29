@@ -5,10 +5,15 @@ public class Truck implements Serviceable {
 
     @Override
     public void service() {
-        System.out.println("Обслуживаем Грузовика");
         System.out.println(" -Меняем покрышку");
-        System.out.println(" -Проверяем двигатель");
-        System.out.println(" -Проверяем прицеп");
+    }
+
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель");
+    }
+
+    public void checkTrailer() {
+        System.out.println("Проверяем прицеп");
     }
 
     public String getModelName() {
