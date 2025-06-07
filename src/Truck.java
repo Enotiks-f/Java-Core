@@ -1,21 +1,4 @@
 public class Truck implements Serviceable {
-
-    private String modelName;
-    private int wheelsCount;
-
-    @Override
-    public void service() {
-        System.out.println(" -Меняем покрышку");
-    }
-
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
-
-    public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
-    }
-
     public String getModelName() {
         return modelName;
     }
@@ -31,4 +14,18 @@ public class Truck implements Serviceable {
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
     }
+
+    private String modelName;
+    private int wheelsCount;
+
+    @Override
+    public void service() {
+        System.out.println("Обслуживаем " + modelName);
+        for (int i = 0; i < wheelsCount; i++) {
+            System.out.println(" -Меняем покрышку");
+        }
+        System.out.println(" -Проверяем двигатель");
+        System.out.println(" -Проверяем прицеп");
+    }
+
 }

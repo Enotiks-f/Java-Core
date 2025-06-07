@@ -2,12 +2,6 @@ public class Bicycle implements Serviceable {
     private String modelName;
     private int wheelsCount;
 
-    @Override
-    public void service() {
-        System.out.println("Обслуживаем велосипед:");
-        System.out.println(" -Меняем покрышку");
-    }
-
     public String getModelName() {
         return modelName;
     }
@@ -22,5 +16,14 @@ public class Bicycle implements Serviceable {
 
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
+    }
+
+    @Override
+    public void service() {
+        System.out.println("Обслуживаем " + modelName);
+        for (int i = 0; i < wheelsCount; i++) {
+            System.out.println(" -Меняем покрышку");
+        }
+        System.out.println(" -Проверяем двигатель");
     }
 }
