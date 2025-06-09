@@ -1,31 +1,21 @@
-public class Truck implements Serviceable {
-    public String getModelName() {
-        return modelName;
+public class Truck extends Vehicle {
+    public Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
-
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public int getWheelsCount() {
-        return wheelsCount;
-    }
-
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
-    }
-
-    private String modelName;
-    private int wheelsCount;
 
     @Override
     public void service() {
         System.out.println("Обслуживаем " + modelName);
-        for (int i = 0; i < wheelsCount; i++) {
-            System.out.println(" -Меняем покрышку");
-        }
-        System.out.println(" -Проверяем двигатель");
-        System.out.println(" -Проверяем прицеп");
+        serviceWheels();
+        checkEngine();
+        checkTrailer();
     }
 
+    private void checkEngine() {
+        System.out.println(" -Проверяем двигатель");
+    }
+
+    private void checkTrailer() {
+        System.out.println(" -Проверяем прицеп");
+    }
 }
